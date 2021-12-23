@@ -8,7 +8,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{ $portfolio->title }}</h5>
                   <p class="card-text">{{ $portfolio->body }}</p>
-                  <p class="card-text"><small class="text-muted">Last updated  {{ $portfolio->published_at }}</small></p>
+                  <p class="card-text"><small class="text-muted">Last updated  {{ $portfolio->created_at }}</small></p>
                 </div>
               </div>
               @endforeach

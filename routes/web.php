@@ -1,10 +1,11 @@
 <?php
 
 
+use App\Models\Home;
 use App\Models\Post;
+use App\Models\User;
 use App\Models\About;
 use App\Models\Category;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
@@ -60,7 +61,7 @@ Route::get('/categories/{category:slug}', function(Category $category){
 Route::get('/authors/{user}', function(User $user){
     return view('personpost',[
         'title'=>'User Post',
-        'posts'=>$user->post,
+        'posts'=>$user->post->load('category','user'),
 
     ]);
 });
