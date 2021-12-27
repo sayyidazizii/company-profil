@@ -5,6 +5,7 @@ use App\Models\Home;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\About;
+use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Category;
 use App\Models\Portfolio;
@@ -55,15 +56,7 @@ class DatabaseSeeder extends Seeder
             'slug'=>'pemrograman'
         ]);
         // Post::factory(5)->create();
-        Post::create([
-            'title'=>'Design Web',
-            'image'=>'web-design.png',
-            'slug'=>'design-web',
-            'excerpt'=>'Perancangan web (web design) adalah  ',
-            'body'=>'<p>Perancangan web (web design) adalah istilah umum yang digunakan untuk mencakup bagaimana isi web konten ditampilkan, (biasanya berupa hypertext atau hypermedia) yang dikirimkan ke pengguna akhir melalui World Wide Web, dengan menggunakan sebuah browser web atau perangkat lunak berbasis web. Tujuan dari web design adalah untuk membuat website—sekumpulan konten online termasuk dokumen dan aplikasi yang berada pada server web / server. Sebuah website dapat berupa sekumpulan teks, gambar, suara dan konten lainnya, serta dapat bersifat interaktif ataupun statis.</p><p> Elemen-elemen seperti teks, forms, images (GIFs, JPEGs, Portable Network Graphics) dan video dapat diletakkan di dalam halaman menggunakan tag-tag HTML/XHTML/XML. Browser terkadang juga memerlukan Plug-ins seperti Adobe Flash, QuickTime, Java, dan sebagainya untuk menampilkan beberapa media yang diletakkan di dalam halaman web menggunakan tag-tag HTML/XHTML.</p><p>Halaman web dan situs web dapat berupa halaman statis, atau dapat diprogram secara dinamis sehingga menghasilkan halaman web dengan konten atau tampilan visual yang diinginkan, tergantung pada berbagai faktor, seperti masukan dari pengguna akhir, masukan dari Webmaster, atau perubahan dalam lingkungan komputasi (seperti situs yang terkait dengan database yang telah diubah).</p>',
-            'category_id'=> 2,
-            'user_id'=> 2
-        ]);
+
         Post::create([
             'title'=>'Pemrograman Web',
             'image'=>'web-programming.png',
@@ -81,6 +74,15 @@ class DatabaseSeeder extends Seeder
             'body'=>'<p>Pengembangan web adalah istilah yang luas untuk pekerjaan yang terlibat dalam mengembangkan suatu situs web untuk internet ( World Wide Web ) atau intranet (jaringan pribadi). Hal ini dapat mencakup desain web, pengembangan konten web, penghubung klien, sisi klien / server-side scripting, web server dan keamanan jaringan konfigurasi, dan e-commerce pembangunan. Namun, kalangan profesional web, “pengembangan web” biasanya merujuk pada aspek non-desain utama dari membangun situs web: menulis markup dan coding . Pengembangan web dapat berkisar dari mengembangkan halaman statis sederhana tunggal teks biasa ke berbasis web yang paling kompleks aplikasi internet, bisnis elektronik, atau layanan jaringan sosial .</p><p>Untuk organisasi yang lebih besar dan bisnis, tim pengembangan web dapat terdiri dari ratusan orang (web developer). Organisasi yang lebih kecil mungkin hanya memerlukan permanen atau kontrak tunggal webmaster, atau tugas sekunder untuk posisi pekerjaan yang terkait seperti desainer grafis dan / atau sistem informasi teknisi. Pengembangan web mungkin merupakan upaya kolaborasi antar departemen bukan domain dari sebuah departemen yang ditunjuk.</p>',
             'category_id'=> 1,
             'user_id'=> 3
+        ]);
+        Post::create([
+            'title'=>'Design Web',
+            'image'=>'web-design.png',
+            'slug'=>'design-web',
+            'excerpt'=>'Perancangan web (web design) adalah  ',
+            'body'=>'<p>Perancangan web (web design) adalah istilah umum yang digunakan untuk mencakup bagaimana isi web konten ditampilkan, (biasanya berupa hypertext atau hypermedia) yang dikirimkan ke pengguna akhir melalui World Wide Web, dengan menggunakan sebuah browser web atau perangkat lunak berbasis web. Tujuan dari web design adalah untuk membuat website—sekumpulan konten online termasuk dokumen dan aplikasi yang berada pada server web / server. Sebuah website dapat berupa sekumpulan teks, gambar, suara dan konten lainnya, serta dapat bersifat interaktif ataupun statis.</p><p> Elemen-elemen seperti teks, forms, images (GIFs, JPEGs, Portable Network Graphics) dan video dapat diletakkan di dalam halaman menggunakan tag-tag HTML/XHTML/XML. Browser terkadang juga memerlukan Plug-ins seperti Adobe Flash, QuickTime, Java, dan sebagainya untuk menampilkan beberapa media yang diletakkan di dalam halaman web menggunakan tag-tag HTML/XHTML.</p><p>Halaman web dan situs web dapat berupa halaman statis, atau dapat diprogram secara dinamis sehingga menghasilkan halaman web dengan konten atau tampilan visual yang diinginkan, tergantung pada berbagai faktor, seperti masukan dari pengguna akhir, masukan dari Webmaster, atau perubahan dalam lingkungan komputasi (seperti situs yang terkait dengan database yang telah diubah).</p>',
+            'category_id'=> 2,
+            'user_id'=> 2
         ]);
         Post::create([
             'title'=>'HTML',
@@ -159,6 +161,35 @@ class DatabaseSeeder extends Seeder
             'icon2'=>'icon-02.png',
             'icon3'=>'icon-03.png',
             'icon4'=>'icon-01.png'
+        ]);
+
+        Contact::create([
+            'instagram'=>'https://www.instagram.com/sayyidazizii/',
+            'facebook'=>'https://www.instagram.com/sayyidazizii/',
+            'linkedln'=>'https://www.linkedin.com/in/sayyid-syafiq-52aaaa220/',
+            'telegram'=>'https://t.me/SayyidAzizyz',
+            'privacy'=>'<p>Di Say-Id, dapat diakses dari http://127.0.0.1:8000/, salah satu prioritas utama kami adalah privasi pengunjung kami. Dokumen Kebijakan Privasi ini berisi jenis informasi yang dikumpulkan dan dicatat oleh Say-Id dan bagaimana kami menggunakannya.</p>
+            <br>
+            <p>Jika Anda memiliki pertanyaan tambahan atau memerlukan informasi lebih lanjut tentang Kebijakan Privasi kami, jangan ragu untuk menghubungi kami.</p>
+            <br>
+            <h1>Informasi yang Kami Kumpulkan</h1>
+            <br>
+            <p>Say-Id mengikuti prosedur standar menggunakan file log. File-file ini mencatat pengunjung ketika mereka mengunjungi situs web. Semua perusahaan hosting melakukan ini dan merupakan bagian dari analisis layanan hosting. Informasi yang dikumpulkan oleh file log termasuk alamat protokol internet (IP), jenis browser, Penyedia Layanan Internet (ISP), tanggal dan waktu, halaman rujukan/keluar, dan mungkin jumlah klik. Ini tidak terkait dengan informasi apa pun yang dapat diidentifikasi secara pribadi. Tujuan informasi adalah untuk menganalisis tren, mengelola situs, melacak pergerakan pengguna di situs web, dan mengumpulkan informasi demografis.</p>
+            <br>
+            <h1>Cookies</h1>
+            <br>
+            <p>Seperti situs web lainnya, Say-Id menggunakan ‘cookie’. Cookie digunakan untuk menyimpan informasi seperti preferensi pengunjung dan halaman yang diakses atau dikunjungi pengunjung pada situs web ini. Informasi tersebut kami gunakan untuk mengoptimalkan pengalaman pengguna dengan menyesuaikan konten halaman web kami.</p>
+            <br>
+            <h1>Kebijakan Privasi Pihak Ketiga</h1>
+            <br>
+            <p>Kebijakan Privasi Say-Id tidak berlaku untuk pengiklan atau situs web lain. Karena itu, kami menyarankan Anda untuk membaca seksama masing-masing Kebijakan Privasi dari pihak ketiga untuk informasi yang lebih rinci. Anda berhak untuk menonaktifkan cookies pada browser Anda.</p>
+            
+            <br>
+            <h1>
+            Persetujuan</h1>
+            <br>
+            <p>Dengan menggunakan situs web kami, Anda dengan ini menyetujui Kebijakan Privasi kami dan menyetujui syarat dan ketentuannya.</p>',
+            'terms'=>''
         ]);
         
     }

@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('category')
+@section('categories')
 <section class="py-5 bg-light">
     <div class="container px-5">
         <h1 class="mb-5 text-center">Post Categories</h1>

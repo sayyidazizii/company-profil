@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Home;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -17,7 +18,7 @@ class HomeController extends Controller
     }
     public function icon(){
         return view('nav',[
-            "homes"=> Home::all()
+            "homes"=> Home::all(),
         ]);
     }
     public function show(Post $post)
@@ -27,4 +28,10 @@ class HomeController extends Controller
             "post"=>$post
         ]);
     }
-}
+        public function footer(){
+            return view('home',[
+                "footers"=>Contact::all(),
+            ]);
+        }
+
+    }

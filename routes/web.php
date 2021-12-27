@@ -13,6 +13,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PortfolioController;
 /*
 |--------------------------------------------------------------------------
@@ -49,13 +50,15 @@ Route::get('/categories', function(){
     ]);
 });
 //categories post
-Route::get('/categories/{category:slug}', function(Category $category){
-    return view('category',[
-        'title'=>$category->name,
-        'posts'=>$category->posts,
-        'category'=>$category->name
-    ]);
-});
+// Route::get('/categories/{category:slug}', function(Category $category){
+//     return view('category',[
+//         'title'=>$category->name,
+//         'posts'=>$category->posts,
+//         'category'=>$category->name
+//     ]);
+// });
+Route::get('/categories/{category:slug}',[CategoryController::class,'show'] );
+
 
 //author postingan blog
 Route::get('/authors/{user}', function(User $user){
@@ -65,3 +68,10 @@ Route::get('/authors/{user}', function(User $user){
 
     ]);
 });
+
+
+Route::get('/privacy', function(){
+    return view('privacy',[
+    ]);
+});
+

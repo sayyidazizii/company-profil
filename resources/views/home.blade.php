@@ -18,70 +18,40 @@
         </div>
     </div>
 </header>
+
+
+
 <!-- Features section-->
 <section class="py-5" id="features">
- <div class="container px-5 my-5">
-   <div class="container px-5">
-    <div class="card border-0 shadow rounded-3 overflow-hidden">
-        {{-- <br>
-        <br> --}}
-        <div class="container" style="position:relative;">
-        <div class="card-body p-0">
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-                <div class="d-inline p-2 bg-primary text-dark">
-                    <div class="col">
-                      <div class="card h-50 ">
-                        <div class="card-body">
-                          <center><img src="{{ ('assets/images/'.$homes[0]->icon1 )}}"></center>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            <div class="d-inline p-2 bg-primary text-dark">
-                <div class="col">
-                  <div class="card h-50 ">
-                    <div class="card-body">
-                      <center><img src="{{ ('assets/images/'.$homes[0]->icon2 )}}"></center>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="d-inline p-2 bg-primary text-dark">
-                <div class="col">
-                  <div class="card h-50 ">
-                    <div class="card-body">
-                      <center><img src="{{ ('assets/images/'.$homes[0]->icon3 )}}"></center>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="d-inline p-2 bg-primary text-dark">
-                <div class="col">
-                  <div class="card h-50 ">
-                    <div class="card-body">
-                      <center><img src="{{ ('assets/images/'.$homes[0]->icon1 )}}"></center>
-                    </div>
-                  </div>
-                </div>
-            </div>
-              </div>
-            </div>
-        </div>
-    </div>
+<div class="container bg-white" style="height:20vh;">
+<table class="table table-borderless">
+  <tr>
+    <td>
+      <center><img src="{{ ('assets/images/'.$homes[0]->icon1 )}}"></center>
+    </td>
+    <td>
+      <center><img src="{{ ('assets/images/'.$homes[0]->icon2 )}}"></center>
+    </td>
+    <td>
+      <center><img src="{{ ('assets/images/'.$homes[0]->icon3 )}}"></center>
+    </td>
+    <td>
+      <center><img src="{{ ('assets/images/'.$homes[0]->icon3 )}}"></center>
+    </td>
+  </tr>
+</table>
 </div>
- </div>
-    </div>
 
 @endif
 
 @if ($posts->count())
-<div class="container center">
+<div class="container center mb-5">
   <div class="text-center">
     <h2 class="fw-bolder">From our blog</h2>
     <p class="lead fw-normal text-muted mb-5">Berikut adalah beberapa Blog terbaru,silahkan kunjungi halaman blog,jika ingin melihat semua blog kami</p>
   </div>
   <div class="row">
-      <div class="col-md-4">
+    <div class="col-md-4 mb-5">
           <div class="card" >
               <div class="position-absolute bg-dark px-3 py-2 " style="background-color: rgba(0, 0, 0, 0.7)"><a href="/categories/{{ $posts[3]->category->slug }}" class="text-white text-decoration-none">{{ $posts[3]->category->name }}</a></div>
               <img src="{{ ('assets/images/'.$posts[3]->image )}}" class="card-img-top" alt="...">
