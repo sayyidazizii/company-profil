@@ -20,6 +20,9 @@ class CreateAboutsTable extends Migration
             $table->string('role');
             $table->string('image');
             $table->text('visi');
+            $table->string('images');
+            $table->text('sejarah');
+            $table->text('tujuan');
             $table->timestamps();
         });
     }

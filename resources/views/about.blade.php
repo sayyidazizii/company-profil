@@ -26,7 +26,23 @@
                 <div class="text-center">
                     <h2 class="fw-bolder">Vision</h2>
                     <div class="fs-4 mb-4 fst-italic">"{{ $about->visi }}"</div>
-                        @endforeach
+
+                        <!-- About section one-->
+                        <section class="py-5 bg-light" id="scroll-target">
+                           <div class="container px-10 my-5">
+                               <div class="row gx-5 align-items-center">
+                                   <h2>Sejarah</h2>
+                                   <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="{{ ('assets/images/'.$about->images )}}" alt="..." /></div>
+                                   <div class="col-lg-6">
+                                       <p class="lead fw-normal text-muted mb-0">{{ $about->sejarah }}</p>
+                                   </div>
+                               </div>
+                                   <h2>Tujuan</h2>
+                                   <p class="lead fw-normal text-muted mb-0">{{ $about->tujuan }}</p>
+                               </div>
+                           </div>
+                           @endforeach
+                       </section>
                     </div>
                 </div>
             </div>

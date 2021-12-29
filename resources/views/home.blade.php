@@ -10,7 +10,7 @@
                     <p class="lead fw-normal text-white-50 mb-4">{{ $homes[0]->body }}</p>
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                         <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
-                        <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a>
+                        <a class="btn btn-outline-light btn-lg px-4" href="/about">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -24,26 +24,31 @@
 <!-- Features section-->
 <section class="py-5" id="features">
 <div class="container bg-white" style="height:20vh;">
-<table class="table table-borderless">
-  <tr>
-    <td>
-      <center><img src="{{ ('assets/images/'.$homes[0]->icon1 )}}"></center>
-    </td>
-    <td>
-      <center><img src="{{ ('assets/images/'.$homes[0]->icon2 )}}"></center>
-    </td>
-    <td>
-      <center><img src="{{ ('assets/images/'.$homes[0]->icon3 )}}"></center>
-    </td>
-    <td>
-      <center><img src="{{ ('assets/images/'.$homes[0]->icon3 )}}"></center>
-    </td>
-  </tr>
-</table>
+  <div class="card">
+    <div class="card-body">
+          <table class="table table-borderless">
+            <tr>
+              <td>
+                <a href="/blog"><center><img src="{{ ('assets/images/'.$homes[0]->icon1 )}}"></center></a>
+              </td>
+              <td>
+                <a href="/portfolio"><center><img src="{{ ('assets/images/'.$homes[0]->icon2 )}}"></center></a>
+              </td>
+              <td>
+                <a href="/contact"><center><img src="{{ ('assets/images/'.$homes[0]->icon3 )}}"></center></a>
+              </td>
+              <td>
+                <a href="/gallery"><center><img src="{{ ('assets/images/'.$homes[0]->icon4 )}}"></center></a>
+              </td>
+            </tr>
+          </table>
+      </div>
+    </div>
 </div>
 
 @endif
-
+<br>
+<br>
 @if ($posts->count())
 <div class="container center mb-5">
   <div class="text-center">
@@ -53,35 +58,35 @@
   <div class="row">
     <div class="col-md-4 mb-5">
           <div class="card" >
-              <div class="position-absolute bg-dark px-3 py-2 " style="background-color: rgba(0, 0, 0, 0.7)"><a href="/categories/{{ $posts[3]->category->slug }}" class="text-white text-decoration-none">{{ $posts[3]->category->name }}</a></div>
-              <img src="{{ ('assets/images/'.$posts[3]->image )}}" class="card-img-top" alt="...">
+              <div class="position-absolute bg-dark px-3 py-2 " style="background-color: rgba(0, 0, 0, 0.7)"><a href="/categories/{{ $posts[0]->category->slug }}" class="text-white text-decoration-none">{{ $posts[3]->category->name }}</a></div>
+              <img src="https://source.unsplash.com/500x500?{{ $posts[0]->category->name }}" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">{{ $posts[3]->title }}</h5>
-                <p>By.<a href="/authors/{{ $posts[3]->user->id }}" class="text-decoration-none"> {{ $posts[3]->user->name }}<small class="text-muted"> {{ $posts[3]->created_at->diffForHumans() }}</small></p>
-                <p class="card-text text-dark">{{ $posts[3]->excerpt }}</p>
-                <a href="posts/{{ $posts[3]->slug }}" class="btn btn-primary">Read More</a>
+                <h5 class="card-title">{{ $posts[0]->title }}</h5>
+                <p>By.<a href="/authors/{{ $posts[0]->user->username }}" class="text-decoration-none"> {{ $posts[3]->user->name }}<small class="text-muted"> {{ $posts[3]->created_at->diffForHumans() }}</small></p>
+                <p class="card-text text-dark">{{ $posts[0]->excerpt }}</p>
+                <a href="posts/{{ $posts[0]->slug }}" class="btn btn-primary">Read More</a>
               </div>
             </div>
       </div>
       <div class="col-md-4">
         <div class="card" >
-            <div class="position-absolute bg-dark px-3 py-2 " style="background-color: rgba(0, 0, 0, 0.7)"><a href="/categories/{{ $posts[4]->category->slug }}" class="text-white text-decoration-none">{{ $posts[4]->category->name }}</a></div>
-            <img src="{{ ('assets/images/'.$posts[4]->image )}}" class="card-img-top" alt="...">
+            <div class="position-absolute bg-dark px-3 py-2 " style="background-color: rgba(0, 0, 0, 0.7)"><a href="/categories/{{ $posts[1]->category->slug }}" class="text-white text-decoration-none">{{ $posts[1]->category->name }}</a></div>
+            <img src="https://source.unsplash.com/500x500?{{ $posts[1]->category->name }}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{ $posts[4]->title }}</h5>
-              <p>By.<a href="/authors/{{ $posts[4]->user->id }}" class="text-decoration-none"> {{ $posts[4]->user->name }}<small class="text-muted"> {{ $posts[4]->created_at->diffForHumans() }}</small></p>
-              <p class="card-text text-dark">{{ $posts[4]->excerpt }}</p>
-              <a href="posts/{{ $posts[4]->slug }}" class="btn btn-primary">Read More</a>
+              <h5 class="card-title">{{ $posts[1]->title }}</h5>
+              <p>By.<a href="/authors/{{ $posts[1]->user->username }}" class="text-decoration-none"> {{ $posts[1]->user->name }}<small class="text-muted"> {{ $posts[1]->created_at->diffForHumans() }}</small></p>
+              <p class="card-text text-dark">{{ $posts[1]->excerpt }}</p>
+              <a href="posts/{{ $posts[1]->slug }}" class="btn btn-primary">Read More</a>
             </div>
           </div>
     </div>
     <div class="col-md-4">
       <div class="card" >
           <div class="position-absolute bg-dark px-3 py-2 " style="background-color: rgba(0, 0, 0, 0.7)"><a href="/categories/{{ $posts[5]->category->slug }}" class="text-white text-decoration-none">{{ $posts[5]->category->name }}</a></div>
-          <img src="{{ ('assets/images/'.$posts[5]->image )}}" class="card-img-top" alt="...">
+          <img src="https://source.unsplash.com/500x500?{{ $posts[2]->category->name }}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ $posts[5]->title }}</h5>
-            <p>By.<a href="/authors/{{ $posts[5]->user->id }}" class="text-decoration-none"> {{ $posts[5]->user->name }}<small class="text-muted"> {{ $posts[5]->created_at->diffForHumans() }}</small></p>
+            <p>By.<a href="/authors/{{ $posts[5]->user->username }}" class="text-decoration-none"> {{ $posts[5]->user->name }}<small class="text-muted"> {{ $posts[5]->created_at->diffForHumans() }}</small></p>
             <p class="card-text text-dark">{{ $posts[5]->excerpt }}</p>
             <a href="posts/{{ $posts[5]->slug }}" class="btn btn-primary">Read More</a>
           </div>

@@ -11,11 +11,18 @@ use App\Http\Controllers\Controller;
 class PostController extends Controller
 {
     public function index(){
+        
+        $posts= Post::latest();
+
+        if(request('search')){
+            $posts->where('title','like','%'. request('search') . '%')
+                  ->orWhere('body','like','%'.request('search') . '%');
+        }
+
         return view('posts',[
-            "title"=>"Company Blog",
+            "title"=>"All Post",
             "homes"=> Home::all(),
-            // "posts"=> Post::all()
-            "posts"=> Post::latest()->get()
+            "posts"=> $posts->get()
     
         ]);
     }

@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class CategoryController extends Controller
 {
     public function index(){
-        return view('category',[
+        return view('posts',[
             "title"=>"Category",
             "homes"=> Home::all(),
             "categorys"=>Category::all()
@@ -18,7 +18,7 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
         
-        return view('category',[
+        return view('posts',[
             'title'=>$category->name,
             'posts'=>$category->posts,
             'category'=>$category->name,
