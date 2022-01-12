@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Company-Profile-Sayyid</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <!-- Bootstrap icons-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
@@ -33,14 +33,19 @@
         
          <!-- Footer-->
          {{-- @foreach ($footers as $footers) --}}
+         {{-- @if ($footers->count()) --}}
          <footer class="bg-dark py-4 mt-auto">
             <div class="container px-3">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Say-id @2021</div>
-                        <a class="fs-5 px-2 link-light" href="#!"><i class="bi-instagram"></i></a>
-                        <a class="fs-5 px-2 link-light" href="#!"><i class="bi-facebook"></i></a>
-                        <a class="fs-5 px-2 link-light" href="#!"><i class="bi-linkedin"></i></a>
-                        <a class="fs-5 px-2 link-light" href="#!"><i class="bi-telegram"></i></a>   
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Say-id @2022</div>
+                        {{-- <a class="fs-5 px-2 link-light" href="{{ footers[0]->instagram }}"><i class="bi-instagram"></i></a>
+                        <a class="fs-5 px-2 link-light" href="{{ footers[0]->facebook }}"><i class="bi-facebook"></i></a>
+                        <a class="fs-5 px-2 link-light" href="{{ footers[0]->linkedin }}"><i class="bi-linkedin"></i></a>
+                        <a class="fs-5 px-2 link-light" href="{{ footers[0]->telegram }}"><i class="bi-telegram"></i></a>    --}}
+                        <a class="fs-5 px-2 link-light" href="https://www.instagram.com/sayyidazizii/"><i class="bi-instagram"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://www.instagram.com/sayyidazizii/"><i class="bi-facebook"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://www.linkedin.com/in/sayyid-syafiq-52aaaa220/"><i class="bi-linkedin"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://t.me/SayyidAzizyz"><i class="bi-telegram"></i></a>  
                     </div>
                     <div class="col-auto">
                         <a class="link-light small" href="/privacy">Privacy</a>
@@ -52,6 +57,7 @@
                     </div>
                 </div>
             </div>
+            {{-- @endif --}}
         </footer>
         {{-- @endforeach --}}
         

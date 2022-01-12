@@ -19,6 +19,7 @@ class CreateContactsTable extends Migration
             $table->string('facebook');
             $table->string('linkedln');
             $table->string('telegram');
+            $table->string('whatsapp');
             $table->text('privacy');
             $table->text('terms');
             $table->timestamps();

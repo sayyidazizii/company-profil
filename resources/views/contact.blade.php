@@ -69,29 +69,44 @@
                 </div>
             </div>
             <!-- Contact cards-->
+            @if ($contacts->count())
             <div class="row gx-5 row-cols-2 row-cols-lg-4 py-5">
                 <div class="col">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-dots"></i></div>
-                    <div class="h5 mb-2">Chat with us</div>
-                    <p class="text-muted mb-0">Chat live with one of our support specialists.</p>
+                    <div class="feature text-center bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-dots"></i></div>
+                    <div class="h5 mb-2 text-center ">Chat with us</div>
+                    <p class="text-muted mb-0  text-center">Chat live with one of our support specialists.
+                        <a class="fs-5 px-2 link-success" href="{{ $contacts[0]->whatsapp }}">
+                            <i class="uil uil-whatsapp"></i>
+                        </a>
+                    </p>
                 </div>
                 <div class="col">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-people"></i></div>
-                    <div class="h5">Ask the community</div>
+                    <div class="feature text-center bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-people"></i></div>
+                    <div class="h5 text-center ">Ask the community</div>
                     <p class="text-muted mb-0">Explore our community forums and communicate with other users.</p>
                 </div>
                 <div class="col">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-question-circle"></i></div>
-                    <div class="h5">Support center</div>
-                    <p class="text-muted mb-0">Browse FAQ's and support articles to find solutions.</p>
+                    <div class="feature text-center bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-question-circle"></i></div>
+                    <div class="h5 text-center ">Social Media</div>
+                    <p class="text-muted mb-0">                        
+                        <div class="col-auto text-center ">
+                        <a class="fs-5 px-2 link-danger" href="{{ $contacts[0]->instagram }}"><i class="bi-instagram"></i></a>
+                        <a class="fs-5 px-2 link-primary" href="{{ $contacts[0]->facebook }}"><i class="bi-facebook"></i></a>
+                        <a class="fs-5 px-2 link-primary" href="{{ $contacts[0]->linkedln }}"><i class="bi-linkedin"></i></a>
+                        <a class="fs-5 px-2 link-primary" href="{{ $contacts[0]->telegram }}"><i class="bi-telegram"></i></a>   
+                         </div>
+                    </p>
                 </div>
                 <div class="col">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-telephone"></i></div>
-                    <div class="h5">Call us</div>
-                    <p class="text-muted mb-0">Call us during normal business hours at (555) 892-9403.</p>
+                    <div class="feature text-center bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-telephone"></i></div>
+                    <div class="h5 text-center ">Call us</div>
+                    <p class="text-muted mb-0 text-center   ">
+                     at {{ $contacts[0]->whatsapp }}
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+    @endif
 </main>
 @endsection

@@ -12,7 +12,7 @@ class GalleryController extends Controller
         return view('gallery',[
             "title"=>"Gallery",
             "homes"=> Home::all(),
-            "gallerys"=>Gallery::all()
+            "gallerys"=>Gallery::latest()->get()
         ]);
     }
     public function show(Gallery $gallery)

@@ -33,15 +33,10 @@ Route::get('/about',[AboutController::class,'index'] );
 Route::get('/contact',[ContactController::class,'index'] );
 Route::get('/gallery',[GalleryController::class,'index'] );
 Route::get('/portfolio',[PortfolioController::class,'index'] );
-
-//about
-Route::get('/about',[AboutController::class,'index']);
 //blog
 Route::get('/blog',[PostController::class,'index']);
 //postingan
 Route::get('/posts/{post:slug}',[PostController::class,'show']);
-
-
 //categories
 Route::get('/categories', function(){
     return view('categories',[
@@ -49,6 +44,25 @@ Route::get('/categories', function(){
         'categories'=>Category::all()
     ]);
 });
+//category
+Route::get('/categories/{category:slug}',[CategoryController::class,'show'] );
+//author postingan blog
+Route::get('/authors/{user:username}', function(User $user){
+    return view('posts',[
+        'title'=>'Postingan User',
+        'posts'=>$user->post->load('category','user'),
+
+    ]);
+});
+//privacy
+Route::get('/privacy', function(){
+    return view('privacy',[
+    ]);
+});
+
+
+
+
 //categories post
 // Route::get('/categories/{category:slug}', function(Category $category){
 //     return view('category',[
@@ -57,21 +71,3 @@ Route::get('/categories', function(){
 //         'category'=>$category->name
 //     ]);
 // });
-Route::get('/categories/{category:slug}',[CategoryController::class,'show'] );
-
-
-//author postingan blog
-Route::get('/authors/{user:username}', function(User $user){
-    return view('posts',[
-        'title'=>'User Post',
-        'posts'=>$user->post->load('category','user'),
-
-    ]);
-});
-
-
-Route::get('/privacy', function(){
-    return view('privacy',[
-    ]);
-});
-

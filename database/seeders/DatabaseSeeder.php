@@ -128,17 +128,54 @@ class DatabaseSeeder extends Seeder
         
  
         Gallery::create([
-            'title'=>'Perusahaan',
-            'image'=>'gallery1.png',
-            'body'=>' Kami bertugas untuk mewujudkan desain sebuah produk atau layanan, biasanya berupa software dan website. Developer membuat produk dengan cara menulis baris-baris kode yang rumit dengan menggunakan berbagai bahasa pemrograman seperti Phyton atau HTML.'
+            'title'=>'1',
+            'image'=>'best.png',
+            'body'=>'gallery '
         ]);
         
         Gallery::create([
-            'title'=>'SEO & Digital',
-            'image'=>'banner-right-image.png',
-            'body'=>'SEO akan meningkatkan visibilitas website di dalam hasil pencarian. Karena konten website telah dioptimasi menggunakan keyword yang sesuai dengan layanan Anda, maka lalu lintas web yang dihasilkan akan jauh lebih berkualitas.'
+            'title'=>'2',
+            'image'=>'cool.png',
+            'body'=>'gallery '
+        ]);
+        Gallery::create([
+            'title'=>'3',
+            'image'=>'dream-big.png',
+            'body'=>'gallery '
         ]);
         
+        Gallery::create([
+            'title'=>'4',
+            'image'=>'fighting.png',
+            'body'=>'gallery '
+        ]);
+        Gallery::create([
+            'title'=>'5',
+            'image'=>'good-vibes.png',
+            'body'=>'gallery '
+        ]);
+        
+        Gallery::create([
+            'title'=>'6',
+            'image'=>'keep-going.png',
+            'body'=>'gallery '
+        ]);
+        Gallery::create([
+            'title'=>'7',
+            'image'=>'kind.png',
+            'body'=>'gallery '
+        ]);
+        
+        Gallery::create([
+            'title'=>'8',
+            'image'=>'love-yourself.png',
+            'body'=>'gallery '
+        ]);
+        Gallery::create([
+            'title'=>'9',
+            'image'=>'strong.png',
+            'body'=>'gallery 9'
+        ]);
         
 
         Portfolio::create([
@@ -173,6 +210,7 @@ class DatabaseSeeder extends Seeder
             'facebook'=>'https://www.instagram.com/sayyidazizii/',
             'linkedln'=>'https://www.linkedin.com/in/sayyid-syafiq-52aaaa220/',
             'telegram'=>'https://t.me/SayyidAzizyz',
+            'whatsapp'=>'085602678871',
             'privacy'=>'<p>Di Say-Id, dapat diakses dari http://127.0.0.1:8000/, salah satu prioritas utama kami adalah privasi pengunjung kami. Dokumen Kebijakan Privasi ini berisi jenis informasi yang dikumpulkan dan dicatat oleh Say-Id dan bagaimana kami menggunakannya.</p>
             <br>
             <p>Jika Anda memiliki pertanyaan tambahan atau memerlukan informasi lebih lanjut tentang Kebijakan Privasi kami, jangan ragu untuk menghubungi kami.</p>

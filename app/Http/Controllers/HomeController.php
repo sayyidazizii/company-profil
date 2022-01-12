@@ -28,10 +28,10 @@ class HomeController extends Controller
             "post"=>$post
         ]);
     }
-        public function footer(){
-            return view('home',[
-                "footers"=>Contact::all(),
-            ]);
-        }
+        // public function footer(){
+        //     return view('main',[
+        //         "footers"=>Contact::all(),
+        //     ]);
+        // }
 
     }
