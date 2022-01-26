@@ -23,6 +23,7 @@
         @yield('about')
         @yield('contact')
         @yield('gallery')
+        @yield('video')
         @yield('blog')
         @yield('portfolio')
         @yield('post')

@@ -5,6 +5,7 @@ use App\Models\Home;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\About;
+use App\Models\Video;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Category;
@@ -176,6 +177,17 @@ class DatabaseSeeder extends Seeder
             'image'=>'strong.png',
             'body'=>'gallery 9'
         ]);
+        Video::create([
+            'title'=>'Vidio Tutoril Design',
+            'video'=>'Cara Membuat Glued Poster Effect - Poster Paper Texture -  Photoshop Tutorial Indonesia.mp4',
+            'body'=>'Cara Membuat Glued Poster Effect - Poster Paper Texture -  Photoshop Tutorial Indonesia'
+        ]);
+        Video::create([
+            'title'=>'Vidio Tutoril Design',
+            'video'=>'Cara Membuat Logo Keren untuk pemula ( Tutorial Photoshop Lengkap ).mp4',
+            'body'=>'Cara Membuat Logo Keren untuk pemula ( Tutorial Photoshop Lengkap )'
+        ]);
+
         
 
         Portfolio::create([
@@ -197,6 +209,9 @@ class DatabaseSeeder extends Seeder
         Home::create([
             'title'=>'SEO & Digital',
             'body'=>'optimasi menggunakan keyword yang sesuai dengan layanan Anda',
+            'slide1'=>'slide1.jpg',
+            'slide2'=>'slide2.jpg',
+            'slide3'=>'slide3.jpg',
             'image'=>'banner-right-image.png',
             'logo'=>'logo-web.png',
             'icon1'=>'ico 1.png',

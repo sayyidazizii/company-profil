@@ -15,6 +15,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PortfolioController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +33,7 @@ Route::get('/home',[HomeController::class,'index'] );
 Route::get('/about',[AboutController::class,'index'] );
 Route::get('/contact',[ContactController::class,'index'] );
 Route::get('/gallery',[GalleryController::class,'index'] );
+Route::get('/video',[GalleryController::class,'video'] );
 Route::get('/portfolio',[PortfolioController::class,'index'] );
 //blog
 Route::get('/blog',[PostController::class,'index']);

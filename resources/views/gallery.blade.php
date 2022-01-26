@@ -1,10 +1,8 @@
 @extends('layout.main')
 @section('gallery')
-
-{{-- <div class="container"> --}}
 <section class="py-5 bg-light">
     <div class="container px-5">
-        <h1 class="mb-5 text-center">Gallery</h1>
+        <h1 class="mb-5 text-center">Foto</h1>
           <div class="container">
             <div class="row">
               @foreach ($gallerys as $galleri)
@@ -23,6 +21,4 @@
         </div>
     </div>
 </section> 
-
-{{-- </div> --}}
 @endsection

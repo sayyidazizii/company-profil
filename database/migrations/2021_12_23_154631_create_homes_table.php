@@ -17,6 +17,9 @@ class CreateHomesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('body');
+            $table->string('slide1');
+            $table->string('slide2');
+            $table->string('slide3');
             $table->string('image');
             $table->string('logo');
             $table->string('icon1');
